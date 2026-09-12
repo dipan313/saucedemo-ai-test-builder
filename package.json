@@ -1,0 +1,27 @@
+{
+  "name": "saucedemo-ai-test-automation",
+  "version": "1.0.0",
+  "description": "AI-Assisted Test Design and Playwright Automation Framework for SauceDemo (Indus Net Technologies Assignment 1)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:primary": "playwright test -g \"TC_LOGIN_01\"",
+    "test:report": "playwright show-report",
+    "ai:preview": "node scripts/ai-test-viewer.js"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "playwright",
+    "page-object-model",
+    "ai-testing",
+    "saucedemo"
+  ],
+  "author": "QA Candidate",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.2",
+    "typescript": "^7.0.2"
+  }
+}

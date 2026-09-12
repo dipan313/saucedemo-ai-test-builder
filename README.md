@@ -1,15 +1,6 @@
 # AI-Assisted Test Case Builder & Playwright Automation Suite
 ### *Indus Net Technologies (INT) — Assignment 1: AI-Generated Test Case Builder + Script Execution*
 
-[![Playwright Tests](https://img.shields.io/badge/Playwright-v1.40+-2EAD33?logo=playwright&logoColor=white)](https://playwright.dev/)
-[![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Page Object Model](https://img.shields.io/badge/Architecture-Page_Object_Model-8A2BE2)](#-page-object-model-pom-architecture)
-[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?logo=github-actions&logoColor=white)](#-cicd-pipeline-github-actions)
-[![Test Target](https://img.shields.io/badge/Target-SauceDemo-E2231A)](https://www.saucedemo.com/)
-[![Tests Passing](https://img.shields.io/badge/Tests-5%2F5%20Passed-brightgreen)](#-automated-test-results)
-
----
-
 ## 📌 Executive Summary
 
 This repository delivers a complete, production-grade test engineering solution for **Assignment 1**. It demonstrates how modern **AI Prompt Engineering** combined with a **Human-in-the-Loop (HITL)** Quality Engineering mindset elevates test design, eliminates blind spots, and accelerates automation delivery.

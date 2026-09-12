@@ -305,7 +305,7 @@ npm run test:report</code></pre>
     fs.unlinkSync(zipPath);
   }
   
-  const powershellCmd = `Compress-Archive -Path .github, ai-artifacts, pages, tests, scripts, package.json, tsconfig.json, playwright.config.ts, README.md, .gitignore -DestinationPath Dipan_Mazumder_Assignment_1_Files.zip -Force`;
+  const powershellCmd = `Compress-Archive -Path .github, ai-artifacts, pages, tests, scripts, package.json, tsconfig.json, playwright.config.ts, README.md -DestinationPath Dipan_Mazumder_Assignment_1_Files.zip -Force`;
   execSync(`powershell -Command "${powershellCmd}"`, { cwd: path.resolve(__dirname, '..') });
   console.log('ZIP successfully generated at:', zipPath);
 }

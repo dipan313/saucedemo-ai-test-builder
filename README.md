@@ -356,7 +356,6 @@ On every `git push` or `pull_request`, GitHub Actions will:
 ├── playwright.config.ts           # Playwright configuration (traces, timeouts, reports)
 ├── package.json                   # Project scripts and dependencies
 ├── tsconfig.json                  # TypeScript compiler settings
-├── .gitignore                     # Clean repository filter
 └── README.md                      # Primary project documentation
 ```
 

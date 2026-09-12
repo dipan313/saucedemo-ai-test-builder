@@ -3,7 +3,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { InventoryPage } from '../pages/InventoryPage';
 import testData from './fixtures/testData.json';
 
-test.describe('SauceDemo Authentication Suite - AI Generated & Refined Test Cases', () => {
+test.describe('SauceDemo Authentication Test Suite', () => {
   let loginPage: LoginPage;
   let inventoryPage: InventoryPage;
 

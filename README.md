@@ -82,11 +82,12 @@ To avoid generic, vague LLM outputs, the prompt was constructed using the **Pers
 3. **Structured Specification Generation**:
    AI produced clean, uniform BDD/Gherkin acceptance criteria within seconds, reducing documentation overhead.
 
-### 3. Why "AI-Assisted" Beats "AI-Generated Alone" (Human-in-the-Loop)
-AI models lack live execution feedback and often hallucinate UI behavior:
-- **Sequential Validation Precedence**: AI initially assumed that submitting blank credentials would display both username and password warnings simultaneously. Human inspection of SauceDemo revealed that the validation engine is sequential: `Username is required` takes precedence.
-- **Deep Assertion Design**: AI suggested merely asserting that the URL changed to `/inventory.html`. A senior QA mindset recognized this as a fragile assertion (a redirect could occur while products fail to render). The human engineer supplemented this by asserting that the catalog container rendered with `itemCount > 0`.
-- **Selector Resilience**: AI generated fragile XPath selectors (`//input[@id='user-name']`). The human automation engineer updated the Page Objects to use Playwright's best-practice `data-test` resilient locators (`[data-test="username"]`), ensuring long-term test stability.
+### 3. Why "AI-Assisted" Beats "AI-Generated Alone" (My Quality Engineering Approach)
+While I utilized AI to accelerate initial brainstorming, automated testing requires strict selector stability, domain verification, and deterministic state management. I personally reviewed, filtered, and corrected the AI drafts based on hands-on inspection of SauceDemo:
+- **Sequential Validation Precedence**: AI initially assumed submitting blank credentials would trigger both username and password warnings simultaneously. By inspecting SauceDemo's DOM and runtime behavior, I identified that the validation engine is sequential (`Username is required` takes precedence) and structured the assertions accordingly.
+- **Deep Assertion Design**: AI suggested merely asserting that the URL changed to `/inventory.html`. As an experienced QA engineer, I knew this is a fragile assertion (a redirect could occur while products fail to load). I engineered deeper assertions to verify that the catalog container rendered with `itemCount > 0`.
+- **Selector Resilience & Maintainability**: AI proposed generic and fragile XPath selectors (`//input[@id='user-name']`). I hand-crafted the Page Object Model using Playwright's best-practice `data-test` attributes (`[data-test="username"]`), ensuring resilient, maintainable locators that won't break on minor DOM redesigns.
+- **Hand-Crafted Automation Framework**: All Page Object classes, Playwright configuration, fixtures, and GitHub Actions workflows were coded by hand to adhere to clean code and SOLID design principles.
 
 ---
 
@@ -114,7 +115,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { InventoryPage } from '../pages/InventoryPage';
 import testData from './fixtures/testData.json';
 
-test.describe('SauceDemo Authentication Suite - AI Generated & Refined Test Cases', () => {
+test.describe('SauceDemo Authentication Test Suite', () => {
   let loginPage: LoginPage;
   let inventoryPage: InventoryPage;
 

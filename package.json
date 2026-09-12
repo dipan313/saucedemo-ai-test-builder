@@ -1,5 +1,5 @@
 {
-  "name": "saucedemo-ai-test-automation",
+  "name": "saucedemo-ai-test-builder",
   "version": "1.0.0",
   "description": "AI-Assisted Test Design and Playwright Automation Framework for SauceDemo (Indus Net Technologies Assignment 1)",
   "scripts": {
@@ -17,7 +17,7 @@
     "ai-testing",
     "saucedemo"
   ],
-  "author": "QA Candidate",
+  "author": "Dipan Mazumder",
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
